@@ -1,9 +1,9 @@
-module github.com/gardusig/pandoraservice
+module github.com/gardusig/guessserver
 
 go 1.21
 
 require (
-	github.com/gardusig/pandoraproto v1.0.5
+	github.com/gardusig/guessproto v1.0.0
 	github.com/sirupsen/logrus v1.9.3
 	google.golang.org/grpc v1.58.3
 )

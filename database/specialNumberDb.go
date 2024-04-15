@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"math/rand"
 
-	"github.com/gardusig/pandoraservice/internal"
+	"github.com/gardusig/guessserver/internal"
 )
 
 const (
@@ -39,7 +39,7 @@ func (db *SpecialNumberDb) ValidateGuess(level uint32, guess int64) (string, *st
 	return internal.Equal, &encryptedMessage, nil
 }
 
-func (db *SpecialNumberDb) ValidateLockedPandoraBox(level uint32, encryptedMessage string) (string, error) {
+func (db *SpecialNumberDb) ValidateLockedBox(level uint32, encryptedMessage string) (string, error) {
 	if encryptedMessage != db.encryptedMessageByLevel[level] {
 		return "", fmt.Errorf("wrong encrypted message")
 	}
